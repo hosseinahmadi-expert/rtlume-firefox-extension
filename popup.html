@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="icons/icon48.png" alt="RTLume">
+      <div>
+        <h1>RTLume</h1>
+        <div class="sub">لنز راست‌چین برای چت‌های هوش مصنوعی</div>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="row">
+        <div>
+          <div class="lbl">فعال‌سازی کلی</div>
+          <div class="small">روشن یا خاموش کردن افزونه در همه سایت‌ها</div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="master">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="card" id="currentCard" style="display:none">
+      <div class="row">
+        <div>
+          <div class="lbl">سایت فعلی</div>
+          <span class="host" id="curHost"></span>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="curToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="small" id="curHint" style="margin-top:6px"></div>
+    </div>
+
+    <div class="card">
+      <div class="row" style="margin-bottom:8px">
+        <div class="lbl">سایت‌های تحت پوشش</div>
+        <button class="btn ghost" id="openOpts" type="button">مدیریت کامل</button>
+      </div>
+      <div class="sites" id="siteList"></div>
+    </div>
+
+    <footer>
+      <span class="privacy">🔒 کاملاً آفلاین — هیچ داده‌ای جمع‌آوری یا ارسال نمی‌شود</span>
+    </footer>
+
+    <div class="signature">
+        توسعه‌دهنده: <strong>Hossein Ahmadi</strong> | <a href="https://Ahmadi.pro" target="_blank" rel="noopener noreferrer">Ahmadi.pro</a>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+{
+  "manifest_version": 3,
+  "name": "RTLume — لنز راست‌چین برای چت‌های هوش مصنوعی",
+  "short_name": "RTLume",
+  "version": "1.0.1",
+  "description": "اصلاح خودکار جهت و قالب متن فارسی/انگلیسی (راست‌چین/چپ‌چین) در سایت‌های هوش مصنوعی. کاملاً آفلاین — هیچ داده‌ای جمع‌آوری یا ارسال نمی‌شود.",
+  "author": "Hossein Ahmadi (Ahmadi.pro)",
+  "homepage_url": "https://Ahmadi.pro",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "rtlume@ahmadi.pro",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "96": "icons/icon96.png"
+  },
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://claude.ai/*",
+    "https://gemini.google.com/*",
+    "https://aistudio.google.com/*",
+    "https://perplexity.ai/*",
+    "https://copilot.microsoft.com/*",
+    "https://grok.com/*",
+    "https://grok.x.ai/*",
+    "https://chat.deepseek.com/*",
+    "https://deepseek.com/*",
+    "https://meta.ai/*",
+    "https://mistral.ai/*",
+    "https://chat.mistral.ai/*",
+    "https://poe.com/*",
+    "https://character.ai/*",
+    "https://you.com/*",
+    "https://phind.com/*",
+    "https://duck.ai/*",
+    "https://huggingface.co/*",
+    "https://qwen.ai/*",
+    "https://chat.qwen.ai/*",
+    "https://kimi.com/*",
+    "https://chat.moonshot.cn/*",
+    "https://dify.ai/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "RTLume",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://claude.ai/*",
+        "https://gemini.google.com/*",
+        "https://aistudio.google.com/*",
+        "https://perplexity.ai/*",
+        "https://copilot.microsoft.com/*",
+        "https://grok.com/*",
+        "https://grok.x.ai/*",
+        "https://chat.deepseek.com/*",
+        "https://deepseek.com/*",
+        "https://meta.ai/*",
+        "https://mistral.ai/*",
+        "https://chat.mistral.ai/*",
+        "https://poe.com/*",
+        "https://character.ai/*",
+        "https://you.com/*",
+        "https://phind.com/*",
+        "https://duck.ai/*",
+        "https://huggingface.co/*",
+        "https://qwen.ai/*",
+        "https://chat.qwen.ai/*",
+        "https://kimi.com/*",
+        "https://chat.moonshot.cn/*",
+        "https://dify.ai/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["fonts/*.woff2"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

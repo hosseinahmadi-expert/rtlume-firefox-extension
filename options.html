@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="icons/icon48.png" alt="RTLume">
+      <div>
+        <h1>تنظیمات RTLume</h1>
+        <div class="sub">مدیریت سایت‌ها و رفتار افزونه</div>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="row">
+        <div>
+          <div class="lbl">فعال‌سازی کلی</div>
+          <div class="small">کلید اصلی روشن / خاموش افزونه</div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="master">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="lbl" style="margin-bottom:6px">افزودن سایت جدید</div>
+      <div class="small" style="margin-bottom:4px">
+        فقط نام دامنه را وارد کنید؛ مثلاً: <span class="host">chat.example.com</span>
+      </div>
+      <form class="addrow" id="addForm">
+        <input type="text" id="newHost" placeholder="example.com" autocomplete="off" spellcheck="false">
+        <button class="btn" type="submit">افزودن</button>
+      </form>
+      <div class="small" id="addMsg" style="color:var(--accent);margin-top:6px"></div>
+    </div>
+
+    <div class="card">
+      <div class="lbl" style="margin-bottom:8px">سایت‌های تحت پوشش</div>
+      <!-- استایل درون‌خطی max-height که باعث مشکل می‌شد، حذف شد -->
+      <div class="sites" id="siteList"></div>
+    </div>
+
+    <footer class="center">
+      <span class="privacy">🔒 این افزونه هیچ داده‌ای را جمع‌آوری، ذخیره یا ارسال نمی‌کند؛ تنها تنظیمات سوییچ‌ها در حافظه‌ی محلی مرورگر شما نگه‌داری می‌شود.</span>
+    </footer>
+
+    <div class="signature">
+        توسعه‌دهنده: <strong>Hossein Ahmadi</strong> | <a href="https://Ahmadi.pro" target="_blank" rel="noopener noreferrer">Ahmadi.pro</a>
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
